@@ -70,4 +70,38 @@ Tela de Vendedores
 
 <img width="881" height="496" alt="Vendedores-Olist" src="https://github.com/user-attachments/assets/d867f24e-2231-4017-b0e2-bcb0ed040197" />
 
+Esta tela oferece uma visão profunda sobre o desempenho dos 3.095 vendedores na plataforma. O foco principal é a performance financeira e a qualidade do serviço (NPS), permitindo a gestão ativa e a identificação de áreas que precisam de intervenção.
+
+1. 🏅 Key Performance Indicators (KPIs)
+Os KPIs de topo fornecem um resumo do volume e da qualidade dos parceiros de vendas:
+
+Vendedores Totais: 3.095 vendedores ativos na plataforma.
+
+Vendas (Receita Total): R$1.805 Bilhões, mostrando a contribuição massiva dos vendedores.
+
+Pedidos: 98.666 pedidos processados.
+
+NPS Médio: 62,38, indicando que a plataforma se encontra na faixa de "Bom" (Score acima de 50 é considerado Bom/Excelente em muitas métricas globais).
+
+2. 📊 Análise da Qualidade de Serviço (NPS)
+O NPS é o foco central para a gestão da experiência do cliente.
+
+Vendedores por Faixa de NPS: O histograma mostra a distribuição da base de vendedores por grupos de NPS:
+
+Promotores (Faixa 1): A maior parte dos vendedores (2.276) está no topo, o que é um excelente indicativo da satisfação geral do cliente.
+
+Críticos e Detratores: Apesar da alta média (62,38), há um número significativo de vendedores nas faixas Crítico (186) e Detrator (60), que exigem programas de melhoria imediata.
+
+Top 10 Vendedores: Permite reconhecer e analisar os vendedores de maior pontuação por um Score de Performance Consolidado (10,0 a 6,8), que serve como benchmark para o restante da base.
+
+3. 📈 Evolução de Vendas e Pedidos (Série Temporal)
+O gráfico de linha e coluna mostra a saúde financeira ao longo do tempo:
+
+Tendência Sazonal: Há um claro padrão de alta nas Vendas (R$) e Pedidos no primeiro semestre do ano (até agosto), seguido por uma queda nos meses finais (Setembro a Dezembro).
+
+Ação Sugerida: Essa queda de volume no final do ano é um ponto de atenção que pode indicar a necessidade de campanhas promocionais ou ajustes de estoque para maximizar a receita no período de maior movimento comercial (geralmente Black Friday e Natal, que caem nos últimos meses).
+
+4. Tabela de Desempenho Individual
+A tabela de detalhe lista as principais métricas por Vendedor_ID, incluindo Receita (Vendas R$), Ticket Médio, Pedidos e NPS individual. Isto permite ações de coaching e a investigação pontual de vendedores com baixo desempenho ou alto faturamento (como o líder de vendas R$137.530.931).
+
 
