@@ -104,4 +104,45 @@ Ação Sugerida: Essa queda de volume no final do ano é um ponto de atenção q
 4. Tabela de Desempenho Individual
 A tabela de detalhe lista as principais métricas por Vendedor_ID, incluindo Receita (Vendas R$), Ticket Médio, Pedidos e NPS individual. Isto permite ações de coaching e a investigação pontual de vendedores com baixo desempenho ou alto faturamento (como o líder de vendas R$137.530.931).
 
+Tela de Produtos
 
+<img width="959" height="540" alt="Produtos - Olist" src="https://github.com/user-attachments/assets/49bbe98e-6d6d-40c4-a609-34dfd26dbcf1" />
+
+Esta tela se concentra em otimizar o catálogo de produtos e a logística, cruzando dimensões físicas (volume e peso) com métricas financeiras (ticket médio e frete). O objetivo é identificar quais produtos e categorias são mais rentáveis e quais impactam mais os custos de envio.
+
+1. 🏅 Key Performance Indicators (KPIs) - Logística
+Os KPIs de topo destacam o volume do catálogo e as dimensões físicas médias:
+
+| **Métrica**      | **Valor**         | **Significado**                                                         |
+|------------------|-------------------|-------------------------------------------------------------------------|
+| **Produtos**     | 134.936           | Tamanho do catálogo de produtos.                                       |
+| **Categorias**   | 74                | Diversidade do mix de produtos.                                        |
+| **Volume Médio** | 4.045 cm³         | Volume médio dos produtos vendidos.                                    |
+| **Peso Médio**   | 2,28 Kg           | Peso médio dos produtos vendidos.                                      |
+| **Itens/Pedido** | 1,36              | Baixo índice, indicando que a maioria dos pedidos é de item único.     |
+| **Frete Médio**  | R$ 1.669          | Custo médio de frete por transação (valor alto indica impacto crítico). |
+
+2. 💲 Análise de Categoria (Pareto de Receita)
+Pareto de Categoria de Produtos: O gráfico de Pareto mostra que o princípio de 80/20 se aplica: poucas categorias geram a maior parte da receita.
+
+As primeiras categorias como beleza_saude, cama_mesa_banho, relogios_presentes e informatica_acessorios são as mais importantes e devem ser priorizadas em estoque e promoções.
+
+3. ⚖️ Peso vs. Rentabilidade e Custo
+Ticket Médio por Faixa de Peso: Cruza a receita média com o peso do produto.
+
+A faixa "Carga Expresso" e "Carga Grande" (acima de 10 Kg e 5-10 Kg) possui os Tickets Médios mais altos (R$4.918 e R$1.367), mas são produtos mais caros para transportar.
+
+Produtos de Peso Pequeno (0.2-0.5 Kg) e Médio (1-3 Kg) têm tickets mais baixos, mas são mais fáceis de expedir.
+
+Média de Frete e Ticket Médio por Faixa de Peso:
+
+Confirma que a Carga Expresso tem o Frete Médio mais alto (e, consequentemente, o maior Ticket Médio), validando que produtos grandes/pesados tendem a ter fretes mais caros, impactando a rentabilidade bruta.
+
+4. 🧭 Top 10 Estados e Categorias por Performance
+Top 10 Estados por Ticket Médio:
+
+SP (R$890,69) e RJ (R$872,71) lideram o Ticket Médio, o que é um fator positivo. No entanto, é importante notar o Giro Estoque (giro de inventário) em SP (1,74), que é o mais alto, indicando que o inventário em SP está se movendo mais rapidamente.
+
+Categorias e Produtos por Faixa de Peso:
+
+Esta tabela fornece a granularidade, mostrando que categorias como cama_mesa_banho e esporte_lazer lideram o Ticket Médio e o Giro Estoque dentro das faixas de peso, sendo as mais eficientes e rentáveis.
