@@ -1,5 +1,22 @@
 # dashboard_olist
 Projeto de BI/DS End-to-End para E-commerce (Kaggle). Dashboard completo em Power BI com 6 telas: Home, Clientes, Vendedores, Produtos, Avaliações. Diferencial: Análise de Sentimento dos comentários (NLP/ML em Python) para extrair informações  acionáveis (Top Reclamações, Sentimento por Produto) e correlacionar NPS à qualidade do feedback.
+Dataset disponível em: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/code?datasetId=55151&sortBy=voteCount
+Enolve 9 arquivos CSV:
+olist_customers_dataset; olist_geolocation_dataset;olist_order_items_dataset; olist_order_payments_dataset.;olist_order_reviews_dataset; olist_orders_dataset.;olist_products_dataset; olist_sellers_dataset; product_category_name_translation
+
+1. Layout
+   (explicação de que foi feito no figma, ícones utilizados e processo de exportação, etc, se necessário..)
+
+1. Modelagem
+   (aqui estarão a descrição dos relacionamentos e tratamentos de dados)
+
+2. Medidas DAX utilizadas, colunas e tabelas calculadas
+   (toda a documentação estará em um arquivo excel, com as seguintes colunas: nome da medida/tabela/coluna, sintaxe, descrição, tipo, tela associada...)
+
+3. Script do Modelo de machine learning utilizado para análise de sentimentos
+Disponível no repositório
+
+4. Visualização e Telas
 
 Tela Home:
 
