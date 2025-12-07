@@ -17,3 +17,19 @@ MétricaValor AbsolutoVariação AnualSignificadoReceita TotalR$1.805 Bilhões+2
 3. 🛍️ Performance de Produtos e Vendedores
 🏆 Top Vendedores por Receita: Este painel permite identificar e recompensar os vendedores de melhor desempenho, essencial para a gestão de parceiros.
 🛒 Top Categorias: As categorias de beleza_saude e cama_mesa_banho lideram o faturamento, indicando onde está o maior valor transacionado na plataforma.
+
+Tela de clientes:
+
+<img width="865" height="486" alt="Clientes-Olist" src="https://github.com/user-attachments/assets/27a8c6d0-8e53-4c5d-a725-f1dfbde8cbfc" />
+
+Esta tela é dedicada à Gestão de Relacionamento com o Cliente (CRM), utilizando a poderosa metodologia RFV (Recência, Frequência, Valor) para segmentar a base de clientes.
+O objetivo é entender o comportamento do consumidor e direcionar campanhas de retenção e crescimento
+.1. 🏅 Key Performance Indicators (KPIs) - Clientes
+Os cartões de topo fornecem métricas cruciais sobre a base de clientes:
+| **Métrica**               | **Valor**            | **Significado**                                               |
+|---------------------------|-----------------------|---------------------------------------------------------------|
+| **Clientes Novos**        | 54.011                | Volume de novos clientes na plataforma.                      |
+| **Receita Total**         | R$ 1.805 Bilhões      | Receita total gerada pela base de clientes.                  |
+| **Ticket Médio**          | R$ 18.238             | Valor médio das transações.                                  |
+| **Recência Média (dias)** | 290,27                | Tempo médio desde a última compra — indica saúde da base.    |
+
