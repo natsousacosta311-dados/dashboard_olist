@@ -65,4 +65,9 @@ Top 10 Clientes por Faturamento: Permite a identificação dos clientes de maior
 4. 🛒 Status de Pedido
 Clientes por Status de Pedido: Fornece um panorama sobre a experiência pós-venda, mostrando que 97.0% dos pedidos estão classificados como Entregue, refletindo uma alta taxa de sucesso na logística.
 
+Tela de Vendedores
+
+
+<img width="881" height="496" alt="Vendedores-Olist" src="https://github.com/user-attachments/assets/d867f24e-2231-4017-b0e2-bcb0ed040197" />
+
 
