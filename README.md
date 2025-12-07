@@ -40,3 +40,29 @@ Os cartões de topo fornecem métricas cruciais sobre a base de clientes:
 | **Ticket Médio**          | R$ 18.238             | Valor médio das transações.                                  |
 | **Recência Média (dias)** | 290,27                | Tempo médio desde a última compra — indica saúde da base.    |
 
+
+2. 🧩 Matriz RFV de Clientes (Recência, Frequência, Valor)
+O coração desta tela é a Matriz RFV, que segmenta a base em 6 grupos com base no comportamento de compra:
+
+
+| **Segmento RFV**   | **Quantidade** | **Ação Sugerida**                                                     |
+|--------------------|----------------|------------------------------------------------------------------------|
+| **Campeões**       | 16.520         | Clientes de maior valor — focar na retenção e fidelização.            |
+| **Em Risco**       | 15.488         | Clientes que compraram bem, mas estão sumidos — focar em reativação.  |
+| **Clientes Leais** | 11.760         | Compram com frequência — focar em programas de fidelidade.            |
+| **Potenciais**     | 8.169          | Recentes, mas com baixo valor — incentivar a segunda compra.          |
+| **Hibernando**     | 8.490          | Não compram há muito tempo — usar promoções fortes para reativar.     |
+
+💰 Receita por Segmento RFV: Este gráfico mostra que os clientes Em Risco e Campeões são os que mais contribuem para a receita total. Isto sublinha a urgência de reativar os clientes "Em Risco", pois eles representam um alto potencial de receita perdida.
+
+3. 🗺️ Distribuição e Evolução da Base
+Clientes por Estado: O painel indica a concentração da base, com SP (41.746), RJ (12.652) e MG (11.633) liderando o número de clientes.
+
+Evolução Mensal de Clientes: O gráfico de linha demonstra a variação dos segmentos mais sensíveis ao longo dos meses. Observa-se que a linha de clientes Em Risco (vermelha) e Leais (verde) está se cruzando, o que é um sinal de alerta: é preciso garantir que os clientes leais não migrem para a categoria de risco.
+
+Top 10 Clientes por Faturamento: Permite a identificação dos clientes de maior valor para ações de relacionamento personalizadas.
+
+4. 🛒 Status de Pedido
+Clientes por Status de Pedido: Fornece um panorama sobre a experiência pós-venda, mostrando que 97.0% dos pedidos estão classificados como Entregue, refletindo uma alta taxa de sucesso na logística.
+
+
