@@ -9,7 +9,14 @@ Tela Home:
 Este painel é a porta de entrada para a análise de desempenho do negócio Olist, fornecendo uma visão consolidada e em tempo real das métricas mais críticas. O design foca na clareza e na identificação imediata de tendências e áreas de atenção.
 1. 🏅 Key Performance Indicators (KPIs)
 Os cartões de topo fornecem uma visão de alto nível da saúde financeira e operacional, com destaque para a variação em relação ao ano anterior:
-MétricaValor AbsolutoVariação AnualSignificadoReceita TotalR$1.805 Bilhões+20.9%Forte crescimento da plataforma.Produtos134.936+21.9%Aumento no volume de itens disponíveis.Clientes99.441+7.8%Crescimento da base de consumidores.Ticket MédioR$18.238+0.9%Estabilidade no valor médio das transações.
+
+| **Métrica**       | **Valor Absoluto**   | **Variação Anual** | **Significado**                                   |
+|-------------------|-----------------------|----------------------|---------------------------------------------------|
+| **Receita Total** | R$ 1.805 Bilhões      | +20,9%               | Forte crescimento da plataforma.                  |
+| **Produtos**      | 134.936               | +21,9%               | Aumento no volume de itens disponíveis.           |
+| **Clientes**      | 99.441                | +7,8%                | Crescimento da base de consumidores.              |
+| **Ticket Médio**  | R$ 18.238             | +0,9%                | Estabilidade no valor médio das transações.       |
+
 2. 💰 Análise de Faturamento e Vendas
 📈 Receita Digital por Mês: O gráfico de série temporal (canto inferior direito) é crucial, mostrando uma tendência de crescimento ascendente e consistente da receita ao longo do ano, validando o sucesso das estratégias implementadas.
 💳 Pedidos por Forma de Pagamento: O Cartão de Crédito é o meio dominante, respondendo por 76.5% dos pedidos, seguido por Boleto (16.9%).
