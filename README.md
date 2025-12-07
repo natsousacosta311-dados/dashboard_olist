@@ -169,7 +169,7 @@ Valor: A implementação de regras de negócio corrigiu mais de 14.280 classific
 
 2. 🏅 Key Performance Indicators (KPIs) - Qualidade
    
-   | Métrica                     | Valor     | Significado                                                           |
+| Métrica                     | Valor     | Significado                                                           |
 |-----------------------------|-----------|------------------------------------------------------------------------|
 | NPS                         | 62,38     | Classificação "Bom/Excelente" na média geral da plataforma.           |
 | Promotores                  | 76.470    | Alto volume de promotores na base de notas (Notas 4 e 5).             |
@@ -194,4 +194,87 @@ A alta taxa de promotores (77,6%) e a baixa taxa de detratores (14,7%) (no gráf
 Tempo Médio de Resposta por Semana: O gráfico de barras mostra a consistência no tempo de resposta, flutuando entre a Semana 10 e 12. A gestão precisa monitorar este KPI para garantir que não ultrapasse o TMR de 2,58 dias.
 
 Avaliações (Detalhe): A tabela fornece o drill-down nos comentários brutos, permitindo investigar individualmente avaliações críticas (como notas 1 ou 2) e o tempo de resposta associado.
+
+🤖 Análise de Sentimentos (Modelo Híbrido ML)
+
+<img width="964" height="508" alt="Sentimentos - Olist" src="https://github.com/user-attachments/assets/7b46ef47-8bf3-4ed9-afcc-851ade0ee3d9" />
+
+Esta tela é o resultado da aplicação de um modelo de Análise de Sentimentos (NLP - Processamento de Linguagem Natural) desenvolvido em Python, que classifica automaticamente os comentários dos clientes.
+
+Fonte de Dados: As informações aqui exibidas são geradas a partir do modelo treinado sobre o dataset de avaliações da Olist. Os scripts para treinamento e aplicação, incluindo o modelo híbrido de ML + Regras de Negócio, podem ser encontrados no repositório com o nome Análise de sentimentos.ipynb.
+
+1. 📊 Distribuição e Volume do Sentimento
+Os KPIs e o gráfico de rosca "Distribuição de Sentimentos (Comentário)" fornecem uma visão quantificada do humor do cliente:
+
+Comentários Totais: 40.950 avaliações foram processadas pelo modelo.
+
+Sentimento Negativo (🔴): 17.587 (42,95%) dos comentários são negativos.
+
+Sentimento Positivo (🟢): 16.314 (39,84%) são positivos.
+
+Conclusão: Há uma leve prevalência de sentimentos negativos sobre os positivos na base de comentários, o que é um ponto de atenção crítica para o CX (Customer Experience).
+
+2. 📈 Evolução e Tendência
+Evolução e Tendência de Sentimento: O gráfico de série temporal (canto inferior esquerdo) revela a dinâmica emocional ao longo do tempo.
+
+O volume de NEGATIVO (linha vermelha) tem uma tendência clara de crescimento ao longo do ano.
+
+O volume de POSITIVO (linha verde) também cresce, mas em um ritmo menor ou mais volátil.
+
+Ponto de Alerta: A partir de outubro/novembro, há um pico significativo no sentimento negativo, exigindo investigação imediata para identificar falhas operacionais ou sazonais.
+
+NPS por Sentimento: O NPS do grupo NEGATIVO é -18,13, confirmando que a insatisfação nos comentários se traduz em notas baixas. O NPS do grupo POSITIVO é 91,79, validando a acurácia do modelo em identificar clientes satisfeitos.
+
+3. 🔍 Termos e Reclamações Mais Frequentes
+Palavras Mais Frequentes: O painel lista termos genéricos como compras, bem, bom, recebi, chegou, entrega, que são usados por clientes Neutros ou Fatuais.
+
+Top 10 Reclamações: Esta é a seção mais acionável, pois identifica os maiores problemas:
+
+Atraso de Entrega (15,32%)
+
+Embalagem Violada/Dano (6,49%)
+
+Qualidade (5,59%)
+
+Ação de Gestão: A prioridade deve ser resolver Atrasos de Entrega, que é a maior fonte de insatisfação.
+
+4. 📦 Contagem de Sentimento por Categoria de Produto
+Este gráfico cruza o resultado do ML com o catálogo, mostrando o impacto do sentimento em categorias específicas:
+
+Cama, Mesa e Banho: Lidera o volume de comentários NEGATIVOS (1.662) e POSITIVOS (1.764), indicando que é a categoria de maior interação emocional.
+
+Beleza e Saúde: Também possui um alto volume de negativos (1.287), que deve ser monitorado de perto.
+
+5. ⚙️ Auditoria do Modelo de Classificação
+O painel de auditoria demonstra a robustez do modelo Híbrido (ML + Regras):
+
+Correção por Regras: As regras de negócio implementadas (ex: REGRA_ATRASO, REGRA_DEFEITO, REGRA_NAO_GOSTEI) foram responsáveis por corrigir milhares de classificações que o ML puro poderia ter classificado com baixa confiança ou de forma errada, elevando a confiabilidade dos dados apresentados.
+
+Confiança: Mostra a confiança média das classificações, diferenciando onde o ML ALTA CONF (alta confiança) atuou sozinho e onde as regras de override (como REGRA_CRITICA) garantiram a classificação correta.
+
+🎯 Conclusão e Resultados Estratégicos do Projeto Olist
+Este conjunto de dashboards fornece uma visão 360º do ecossistema Olist, transformando dados brutos em inteligência de negócio acionável em quatro pilares fundamentais: Receita, Clientes, Vendedores e Qualidade (CX).
+
+💰 Performance Financeira e Crescimento
+O projeto valida um crescimento robusto na plataforma, com a Receita Total e o volume de Produtos apresentando alta variação anual (acima de +20.9% e +21.9%, respectivamente).
+
+Foco Regional: São Paulo é o motor financeiro, responsável por 37,4% da Receita e o maior volume de clientes.
+
+Alerta de Sazonalidade: Observa-se uma queda clara e preocupante nas vendas e pedidos a partir de Setembro, o que exige uma estratégia imediata de campanha para os meses finais do ano.
+
+🧑‍🤝‍🧑 Gestão de Clientes e Parceiros
+A plataforma permite a gestão ativa da base de clientes e vendedores:
+
+Retenção de Clientes: A Matriz RFV (Recência, Frequência, Valor) identifica os Clientes Em Risco (15.488) como um grupo de alto valor que precisa de atenção, pois contribuem significativamente para a receita.
+
+Qualidade dos Vendedores: O NPS médio geral é bom (62,38), mas a segmentação revela 186 vendedores no grupo "Crítico" (NPS < -50) e 60 na faixa "Detrator", exigindo intervenção urgente para mitigar o risco de reputação.
+
+🤖 Diferencial Técnico: A Voz do Cliente (Análise de Sentimentos)
+O dashboard de Avaliações é a prova de conceito do seu skill em Data Science, onde o modelo de NLP transformou feedback não estruturado em métricas de qualidade:
+
+Metodologia Híbrida: O gráfico de sentimentos é o resultado de um modelo de Machine Learning (SVM), aprimorado com Regras de Negócio para garantir a precisão de frases críticas.
+
+Confiança Comprovada: A aplicação dessas regras corrigiu milhares de classificações e elevou a Confiança Média Final para 81,3%, fornecendo dados de alta fidelidade para o BI.
+
+Prioridade de CX: O modelo identifica claramente que Atraso de Entrega é a principal reclamação (15,32%) e o sentimento NEGATIVO (45,9%) está em tendência de crescimento, confirmando a necessidade de otimizar a logística para manter a satisfação do cliente.
 
