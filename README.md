@@ -146,3 +146,52 @@ SP (R$890,69) e RJ (R$872,71) lideram o Ticket Médio, o que é um fator positiv
 Categorias e Produtos por Faixa de Peso:
 
 Esta tabela fornece a granularidade, mostrando que categorias como cama_mesa_banho e esporte_lazer lideram o Ticket Médio e o Giro Estoque dentro das faixas de peso, sendo as mais eficientes e rentáveis.
+
+Tela de Avaliações
+<img width="964" height="505" alt="Avaliações" src="https://github.com/user-attachments/assets/d2bd231d-33f8-478f-aa9c-23124da8ecb0" />
+
+Esta tela é dedicada a medir a Qualidade da Experiência do Cliente (CX), usando o feedback direto para identificar pontos fortes e problemas de forma rápida e quantificada. O grande destaque é o uso de um modelo de Machine Learning para análise de sentimentos.
+
+1. 🤖 Inovação: Análise de Sentimentos Híbrida (ML + Regras)
+O gráfico de rosca "Distribuição de Sentimentos (Comentário)" é gerado a partir de um modelo de Machine Learning (SVM com TF-IDF) treinado em Python (Jupyter Notebook), que foi aprimorado com Regras de Negócio (modelo híbrido).
+
+Acurácia: O modelo foi testado em uma base de validação, atingindo uma acurácia de 80.3%.
+
+Distribuição:
+
+NEGATIVO (45.9%): Alto volume de comentários negativos (18.778), indicando que a insatisfação precisa ser endereçada.
+
+POSITIVO (43.6%): Um volume ligeiramente menor que o negativo, mas ainda robusto (17.863).
+
+NEUTRO (10.5%): Comentários factuais que não expressam emoção forte (4.309).
+
+Valor: A implementação de regras de negócio corrigiu mais de 14.280 classificações do ML puro, garantindo que frases críticas como "veio com defeito" ou "mas não gostei" fossem categorizadas corretamente como NEGATIVO, aumentando a Confiança Média Final para 81.3%.
+
+2. 🏅 Key Performance Indicators (KPIs) - Qualidade
+   
+   | Métrica                     | Valor     | Significado                                                           |
+|-----------------------------|-----------|------------------------------------------------------------------------|
+| NPS                         | 62,38     | Classificação "Bom/Excelente" na média geral da plataforma.           |
+| Promotores                  | 76.470    | Alto volume de promotores na base de notas (Notas 4 e 5).             |
+| Detratores                  | 14,7%     | Baixa taxa de detratores na base de notas (Notas 1 e 2).              |
+| TMR (Tempo Médio de Resposta) | 2,58    | Tempo médio de 2 dias e meio para responder a uma avaliação.          |
+| Comentários                 | 40.950    | Volume de feedback não estruturado capturado pelo modelo de ML.       |
+| Média de Notas              | 4,09      | Nota média geral alta, reforçando a qualidade do serviço.             |
+
+
+3. 📈 Análise de Tendências e Notas
+NPS e % Promotores por Mês: O gráfico de linha e coluna mostra que a performance do NPS e do percentual de promotores caiu drasticamente a partir de Setembro, com o NPS entrando em território NEGATIVO (abaixo de zero).
+
+Ação Sugerida: Essa queda sazonal/temporal é um alerta máximo que exige investigação imediata na logística ou qualidade dos produtos vendidos a partir de setembro.
+
+Distribuição de Nota e Total Avaliações:
+
+O volume de notas 5 é dominante, o que mantém a Média de Notas em 4,09.
+
+A alta taxa de promotores (77,6%) e a baixa taxa de detratores (14,7%) (no gráfico de rosca superior) confirmam que a maioria dos clientes fica satisfeita.
+
+4. ⏱️ Tempo de Resposta e Detalhamento
+Tempo Médio de Resposta por Semana: O gráfico de barras mostra a consistência no tempo de resposta, flutuando entre a Semana 10 e 12. A gestão precisa monitorar este KPI para garantir que não ultrapasse o TMR de 2,58 dias.
+
+Avaliações (Detalhe): A tabela fornece o drill-down nos comentários brutos, permitindo investigar individualmente avaliações críticas (como notas 1 ou 2) e o tempo de resposta associado.
+
