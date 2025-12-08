@@ -37,12 +37,12 @@ O que os clientes relatam em suas avaliações? Quais problemas são mais freque
 --
 A documentação detalhada do projeto está organizada na pasta `docs/`.
 
-| Tema                   | Conteúdo                                                         | Acesso Rápido                                            |
-|------------------------|------------------------------------------------------------------|----------------------------------------------------------|
-| Visão Geral            | Escopo, objetivos e principais resultados                        | [docs/01_visao_geral.md](docs/Visão_geral.md)         |
+| Tema                   | Conteúdo                                                         | Acesso Rápido                                                    |
+|------------------------|------------------------------------------------------------------|------------------------------------------------------------------|
+| Visão Geral            | Escopo, objetivos e principais resultados                        | [docs/01_visao_geral.md](docs/01_visao_geral.md)                 |
 | Modelagem de Dados     | Diagrama de relacionamentos, cardinalidades e direção dos filtros | [docs/02_modelagem_de_relacionamentos.md](docs/02_modelagem_de_relacionamentos.md) |
-| Transformações ETL     | Guia completo das etapas de transformação e limpeza (Power Query) | [docs/03_transformacoes_power_query.md](docs/transformacoes_powerquery.md)     |
-| Dicionário de Medidas  | Definições e lógica de todas as métricas e KPIs em DAX           | [docs/04_dicionario_medidas.md](docs/medidas_descrição.md)                     |
+| Transformações ETL     | Guia completo das etapas de transformação e limpeza (Power Query) | [docs/03_transformacoes_power_query.md](docs/03_transformacoes_power_query.md)     |
+| Dicionário de Medidas  | Definições e lógica de todas as métricas e KPIs em DAX           | [docs/04_dicionario_medidas.md](docs/04_dicionario_medidas.md)   |
 
 
 🤖 4. Análise de Sentimento (NLP)
