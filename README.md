@@ -67,13 +67,13 @@ Relacionamentos inativos foram mantidos para análises alternativas de data:
 - 
 3. 📐 Medidas, Colunas e Tabelas Calculadas
 
-Toda a documentação DAX (medidas, táticas e explicação) está disponível em um arquivo Excel incluído no repositório, com:
+Toda a documentação DAX (medidas, táticas e explicação) está disponível em um arquivo Excel incluído no repositório (medidas_descrição), com:
 
 Nome
 Sintaxe
 Descrição
 Tipo
-Tela associada
+
 
 Inclui RFV, NPS, Análises de Receita, Faixas de Peso/Volume, Tabelas Virtuais, Séries Temporais, etc.
 
