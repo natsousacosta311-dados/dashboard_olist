@@ -54,22 +54,20 @@ Notebook: notebook/analise_sentimentos.ipynb
 
 📁 5. Estrutura de Pastas do Repositório 
 ---
-O repositório está organizado para facilitar a exploração do código e da documentação:
-
 dashboard_olist/
 │
 ├── README.md
 │
 ├── docs/
 │   ├── 01_visao_geral.md
-│   ├── modelagem_de__relacionamentos.md       ← imagem exportada do Power BI
-│   ├── transformacoes_power_query.md        ← guia detalhado
-│   ├── medidas_descrição.md                ← tabela com DAX + descrição
+│   ├── 02_modelagem_de_relacionamentos.md      # imagem exportada do Power BI
+│   ├── 03_transformacoes_power_query.md        # guia detalhado
+│   ├── 04_dicionario_medidas.md                # tabela com DAX + descrição
 │
-├── imagens/                                     ← prints das páginas do BI
+├── imagens/                                    # prints das páginas do BI
 │
 ├── notebook/
-│   └── analise_sentimentos.ipynb               ← NLP (Python)
+│   └── analise_sentimentos.ipynb               # NLP (Python)
 
 
 📄 Licença
