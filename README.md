@@ -1,10 +1,77 @@
 📊 Dashboard Olist — BI/DS End-to-End
 
-Projeto completo de Analytics utilizando o dataset público da Olist (Kaggle) para criação de um ecossistema integrado de Business Intelligence + Data Science, com foco em Receita, Clientes, Produtos, Vendedores e Qualidade (NPS + Análise de Sentimentos).
-
-Dataset: Olist E-commerce (9 CSVs)
+Projeto completo de Business Intelligence + Data Analytics + NLP (Análise de Sentimentos) desenvolvido com Power BI, Python e Power Query.
+Dataset oficial da Olist (Kaggle).
 Modelos: Power BI, Python (NLP), Power Query, DAX
 Arquitetura: ETL → Modelagem Dimensional → Métricas DAX → ML (SVM + Regras) → Dashboards Interativos
+
+📝 Resumo Executivo 
+
+Este projeto entrega uma visão completa da operação de e-commerce da Olist, consolidando vendas, comportamento do cliente, desempenho de vendedores e percepção de qualidade. O dashboard transforma dados brutos em insights acionáveis, incluindo análise de sentimento baseada em NLP. A solução demonstra domínio em modelagem de dados, DAX, storytelling e machine learning aplicado ao negócio.
+
+🧩 1. Objetivo do Projeto
+
+Construir um dashboard profissional que responda perguntas-chave de negócio:
+
+Como está o desempenho comercial (faturamento, pedidos, ticket médio)?
+Quais clientes geram mais valor e como segmentá-los (RFV)?
+Quais produtos têm melhor performance e margem?
+Como os vendedores se comportam (prazo de envio, pedidos, reclamações)?
+O que os clientes relatam em suas avaliações? Quais problemas são mais frequentes?
+
+🧩 Guia de Instalação / Reprodutibilidade 
+1. Baixar os dados originais da Olist
+O dataset pode ser baixado diretamente do Kaggle, no link (https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+
+2. Abrir o Power BI Desktop
+3. Importar as tabelas
+
+olist_costumers_dataset.csv
+olist_geolocation_datasset.csv
+olist_order_items_dataset.csv
+olist_order_payments_dataset.csv
+olist_order_reviews_dataset.csv
+olist_orders_dataset.csv
+olist_products_dataset.csv 
+olist_sellers_dataset.csv
+
+4. Seguir a documentação das transformações Power Query
+
+(Você colocará esse guia depois — vou te ensinar como montar o seu.)
+
+5. Criar o modelo com os relacionamentos conforme o diagrama (tabela deste repositório)
+   
+6. Criar as  medidas DAX usando o dicionário fornecido
+   
+7. Montar as páginas usando as referências visuais das imagens
+
+📁 2. Estrutura de Pastas do Repositório 
+
+dashboard_olist/
+│
+├── pbix/                     # Arquivo Power BI
+│   └── dashboard_olist.pbix
+│
+├── data/                     # Dados brutos e tratados (quando permitido)
+│
+├── docs/                     # Documentação técnica
+│   ├── dicionario_medidas.xlsx
+│   ├── modelagem_relacionamentos.png
+│   └── guia_transformacoes_powerquery.md
+│
+├── notebooks/                # NLP e Machine Learning
+│   └── analise_sentimentos_olist.ipynb
+│
+├── prints/                   # Imagens do dashboard
+│   ├── home.png
+│   ├── clientes.png
+│   ├── vendedores.png
+│   ├── produtos.png
+│   └── avaliacoes.png
+│
+├── README.md                 # Arquivo principal (este aqui)
+└── LICENSE
+
 
 1. 🎨 Layout & Design
 
