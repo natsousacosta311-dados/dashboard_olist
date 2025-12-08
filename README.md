@@ -50,7 +50,21 @@ Relacionamentos documentados abaixo:
 | olist_avaliações_dataset | ID_Pedido | olist_produtos_pedidos_dataset | Pedido_ID | Many → Many | BothDirections | **Inativo** |
 | olist_clientes_dataset | Primeira Compra (Cliente) | LocalDateTable_f36dd289... | Date | Many → One | OneDirection | Ativo |
 
+## 🧩 Resumo dos Relacionamentos
 
+O modelo utiliza relacionamentos entre diversas tabelas do Olist, integrando pedidos, produtos, clientes, vendedores, avaliações, pagamentos e análises de sentimento.
+
+Principais características:
+- A maioria dos relacionamentos segue cardinalidade **Many → One**, típica de modelos estrela.
+- Há relacionamentos **One → One** para dimensões especializadas (ex.: RFV).
+- Alguns relacionamentos são **Many → Many**, preservados por necessidade do negócio.
+- Relacionamentos envolvendo datas utilizam tabelas de calendário automáticas.
+
+Relacionamentos inativos foram mantidos para análises alternativas de data:
+- `olist_pedidos_dataset[data_envio]` → `dCalendario[Data]`
+- `olist_avaliações_dataset[Data_criação]` → `dCalendario[Data]`
+- `olist_avaliações_dataset[ID_Pedido]` → `olist_produtos_pedidos_dataset[Pedido_ID]`
+- 
 3. 📐 Medidas, Colunas e Tabelas Calculadas
 
 Toda a documentação DAX (medidas, táticas e explicação) está disponível em um arquivo Excel incluído no repositório, com:
