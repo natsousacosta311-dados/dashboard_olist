@@ -9,7 +9,7 @@ Interpretações analíticas das telas
 As imagens completas estão na pasta /images do repositório.
    
 🏡 Tela Home — Visão Geral do Negócio
-
+---
 <p align="center"> <img width="900" src="https://github.com/user-attachments/assets/07e2bc41-e725-4c32-968d-45c81f26cb1b" /> </p>
 
 A Home fornece um panorama consolidado da operação, com ênfase nos principais indicadores financeiros e operacionais da Olist.
@@ -38,6 +38,7 @@ As categorias Beleza_saude, cama_mesa_banho e relogios_presentes lideram com mai
 A página destaca evolução temporal (receita, pedidos e clientes) e evidencia quais categorias e vendedores mais impulsionam o faturamento.
 
 👥 Tela Clientes — CRM & RFV
+---
 
 <p align="center"> <img width="900" src="https://github.com/user-attachments/assets/27a8c6d0-8e53-4c5d-a725-f1dfbde8cbfc" /> </p>
 
@@ -59,6 +60,7 @@ Clientes por Status de Pedido:
 97% entregues → excelente consistência logística.
 
 🧑‍🏫 Tela Vendedores — Performance & NPS
+---
 
 <p align="center"> <img width="900" src="https://github.com/user-attachments/assets/d867f24e-2231-4017-b0e2-bcb0ed040197" /> </p>
 
@@ -79,6 +81,7 @@ Ação recomendada: intensificar campanhas para Black Friday e Natal.
 A tabela detalhada permite monitorar desempenho individual (receita, ticket médio, pedidos, NPS), facilitando coaching e detecção de casos extremos.
 
 📦 Tela Produtos — Catálogo, Logística & Rentabilidade
+---
 
 <img width="959" height="540" alt="Produtos - Olist" src="https://github.com/user-attachments/assets/49bbe98e-6d6d-40c4-a609-34dfd26dbcf1" />
 
@@ -109,6 +112,8 @@ SP (R$890,69) e RJ (R$872,71) lideram em Ticket Médio.
 SP também lidera em Giro de Estoque (1,74) — ótima eficiência
 
 ⭐ Tela Avaliações — Qualidade & Voz do Cliente
+---
+
 <p align="center"> <img width="900" src="https://github.com/user-attachments/assets/d2bd231d-33f8-478f-aa9c-23124da8ecb0" /> </p>
 Esta tela foca no CX (Customer Experience) usando notas, tempo de resposta e comentários.
 
@@ -131,6 +136,8 @@ Ação Sugerida: Essa queda sazonal/temporal é um alerta máximo que exige inve
 
 
 🤖 Tela Análise de Sentimentos — NLP Híbrido (ML + Regras)
+---
+
 <p align="center"> <img width="900" src="https://github.com/user-attachments/assets/7b46ef47-8bf3-4ed9-afcc-851ade0ee3d9" /> </p>
 O diferencial técnico do projeto: um modelo SVM + TF-IDF, ajustado com Regras de Negócio.
 Scripts disponíveis em:
@@ -182,6 +189,7 @@ Correção por Regras: As regras de negócio implementadas (ex: REGRA_ATRASO, RE
 
 
 🎯 Conclusão e Resultados Estratégicos do Projeto Olist
+---
 Este conjunto de dashboards fornece uma visão 360º do ecossistema Olist, transformando dados brutos em inteligência de negócio acionável em quatro pilares fundamentais: Receita, Clientes, Vendedores e Qualidade (CX).
 
 💰 1. Performance Financeira
