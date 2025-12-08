@@ -36,41 +36,42 @@ olist_products_dataset.csv
 olist_sellers_dataset.csv
 
 4. Seguir a documentação das transformações Power Query
-
-(Você colocará esse guia depois — vou te ensinar como montar o seu.)
-
-5. Criar o modelo com os relacionamentos conforme o diagrama (tabela deste repositório)
    
-6. Criar as  medidas DAX usando o dicionário fornecido
+📄 [Guia Completo de Transformações (Power Query)](docs/transformacoes_powerquery.md)
+
+
+6. Criar o modelo com os relacionamentos conforme o diagrama (tabela deste repositório)
    
-7. Montar as páginas usando as referências visuais das imagens
+7. Criar as  medidas DAX usando o dicionário fornecido
+   
+8. Montar as páginas usando as referências visuais das imagens
 
 📁 2. Estrutura de Pastas do Repositório 
 
 dashboard_olist/
 │
-├── pbix/                     # Arquivo Power BI
-│   └── dashboard_olist.pbix
+├── README.md
 │
-├── data/                     # Dados brutos e tratados (quando permitido)
+├── docs/
+│   ├── 01_visao_geral.md
+│   ├── 02_modelagem_relacionamentos.png        ← imagem exportada do Power BI
+│   ├── 03_transformacoes_power_query.md        ← guia detalhado
+│   ├── 04_dicionario_medidas.md                ← tabela com DAX + descrição
+│   └── 05_insights_negocio.md
 │
-├── docs/                     # Documentação técnica
-│   ├── dicionario_medidas.xlsx
-│   ├── modelagem_relacionamentos.png
-│   └── guia_transformacoes_powerquery.md
+├── data/
+│   ├── raw/                                    ← dados originais (Kaggle)
+│   └── processed/                              ← dados tratados (opcional)
 │
-├── notebooks/                # NLP e Machine Learning
-│   └── analise_sentimentos_olist.ipynb
+├── images/
+│   ├── telas_dashboard/                        ← prints das páginas do BI
+│   └── graficos/                               ← visualizações extras
 │
-├── prints/                   # Imagens do dashboard
-│   ├── home.png
-│   ├── clientes.png
-│   ├── vendedores.png
-│   ├── produtos.png
-│   └── avaliacoes.png
+├── notebook/
+│   └── analise_sentimentos.ipynb               ← NLP (Python)
 │
-├── README.md                 # Arquivo principal (este aqui)
-└── LICENSE
+└── pbix/
+    └── dashboard_olist.pbix (link externo)     ← link Google Drive / OneDrive
 
 
 1. 🎨 Layout & Design
