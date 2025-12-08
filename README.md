@@ -24,6 +24,7 @@ O que os clientes relatam em suas avaliações? Quais problemas são mais freque
 O dataset pode ser baixado diretamente do Kaggle, no link (https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
 2. Abrir o Power BI Desktop
+   
 3. Importar as tabelas
 
 olist_costumers_dataset.csv
@@ -40,9 +41,11 @@ olist_sellers_dataset.csv
 📄 [Guia Completo de Transformações (Power Query)](docs/transformacoes_powerquery.md)
 
 
-6. Criar o modelo com os relacionamentos conforme o diagrama (tabela deste repositório)
+5. Criar o modelo com os relacionamentos conforme o diagrama e documentação:
+(docs/02_modelagem_de_relacionamentos.md)
    
-7. Criar as  medidas DAX usando o dicionário fornecido
+6. Criar as  medidas DAX usando o dicionário fornecido
+(docs/medidas_descrição.md)
    
 8. Montar as páginas usando as referências visuais das imagens
 
@@ -59,81 +62,18 @@ dashboard_olist/
 │   ├── 04_dicionario_medidas.md                ← tabela com DAX + descrição
 │   └── 05_insights_negocio.md
 │
-├── data/
-│   ├── raw/                                    ← dados originais (Kaggle)
-│   └── processed/                              ← dados tratados (opcional)
-│
-├── images/
-│   ├── telas_dashboard/                        ← prints das páginas do BI
-│   └── graficos/                               ← visualizações extras
+├── images/                                     ← prints das páginas do BI
 │
 ├── notebook/
 │   └── analise_sentimentos.ipynb               ← NLP (Python)
-│
-└── pbix/
-    └── dashboard_olist.pbix (link externo)     ← link Google Drive / OneDrive
 
 
 1. 🎨 Layout & Design
 
 Layout criado no Figma, com ícones e paleta padronizada para consistência visual. Todos os elementos foram exportados em SVG/PNG e integrados ao Power BI.
 
-2. 🧩 Modelagem & Tratamento de Dados
 
-A modelagem segue o padrão estrela (star schema):
-
-Fatos: Pedidos, Itens, Pagamentos, Avaliações
-Dimensões: Clientes, Vendedores, Produtos, Datas, Geolocalização, Categorias
-Tratamentos no Power Query: normalização de textos, conversão de tipos, tratamento de datas, criação de tabelas calendário e tabelas auxiliares (RFV, NPS, Faixas de Peso/Volume, Sentimentos).
-Relacionamentos documentados abaixo:
-
-## 🔗 Relacionamentos do Modelo (Power BI)
-
-| Tabela Origem | Coluna Origem | Tabela Destino | Coluna Destino | Cardinalidade | Direção | Status |
-|--------------|----------------|----------------|----------------|---------------|---------|--------|
-| olist | Date accessed | LocalDateTable_bc25db41... | Date | Many → One | OneDirection | Ativo |
-| olist | Date modified | LocalDateTable_d24415e6... | Date | Many → One | OneDirection | Ativo |
-| olist | Date created | LocalDateTable_da781db8... | Date | Many → One | OneDirection | Ativo |
-| olist_avaliações_dataset | data_resposta_avaliacao | LocalDateTable_a30b965a... | Date | Many → One | OneDirection | Ativo |
-| olist_pedidos_dataset | Data_aprovação | LocalDateTable_06da45c7... | Date | Many → One | OneDirection | Ativo |
-| olist_pedidos_dataset | data_entrega | LocalDateTable_9610681f... | Date | Many → One | OneDirection | Ativo |
-| olist_pedidos_dataset | data_prevista_entrega | LocalDateTable_69f414a0... | Date | Many → One | OneDirection | Ativo |
-| olist_pedidos_dataset | Cliente_ID | olist_clientes_dataset | Cliente_ID | One → One | BothDirections | Ativo |
-| olist_produtos_pedidos_dataset | Pedido_ID | olist_pedidos_dataset | Pedido_ID | Many → Many | BothDirections | Ativo |
-| olist_pagamentos_dataset | ID_Pedido | olist_pedidos_dataset | Pedido_ID | Many → Many | OneDirection | Ativo |
-| olist_avaliações_dataset | ID_Pedido | olist_pedidos_dataset | Pedido_ID | Many → One | OneDirection | Ativo |
-| olist_produtos_pedidos_dataset | Produto_ID | olist_produtos_dataset | ID_Produto | Many → One | OneDirection | Ativo |
-| olist_produtos_pedidos_dataset | Vendedor_ID | olist_vendedores_dataset | Vendedor_ID | Many → One | OneDirection | Ativo |
-| olist_produtos_pedidos_dataset | Data_Limite_envio | LocalDateTable_31e0bb4d... | Date | Many → One | OneDirection | Ativo |
-| olist_clientes_dataset | Cliente_ID | Tabela RFV Clientes | Cliente_ID | One → One | BothDirections | Ativo |
-| Base_com_Sentimento | ID_Pedido | olist_pedidos_dataset | Pedido_ID | Many → One | OneDirection | Ativo |
-| olist_avaliações_dataset | ID_avaliaçao | Base_com_Sentimento | ID_avaliaçao | Many → Many | BothDirections | Ativo |
-| Exemplos_Problemas | Tipo_Problema | Top_10_Reclamacoes | Tipo_Problema | Many → One | OneDirection | Ativo |
-| Sentimento_por_Confianca | Faixa_Confianca | Distribuicao_Confianca | Faixa_Confianca | One → One | BothDirections | Ativo |
-| dCalendario | Data | LocalDateTable_0f03f024... | Date | Many → One | OneDirection | Ativo |
-| olist_pedidos_dataset | data_envio | dCalendario | Data | Many → One | OneDirection | **Inativo** |
-| olist_avaliações_dataset | Data_criação | dCalendario | Data | Many → One | OneDirection | **Inativo** |
-| olist_pedidos_dataset | Data_compra | dCalendario | Data | Many → One | OneDirection | Ativo |
-| Base_com_Sentimento | Metodo_Classificacao | Confianca_por_Metodo | Metodo_Classificacao | Many → One | OneDirection | Ativo |
-| olist_avaliações_dataset | ID_Pedido | olist_produtos_pedidos_dataset | Pedido_ID | Many → Many | BothDirections | **Inativo** |
-| olist_clientes_dataset | Primeira Compra (Cliente) | LocalDateTable_f36dd289... | Date | Many → One | OneDirection | Ativo |
-
-## 🧩 Resumo dos Relacionamentos
-
-O modelo utiliza relacionamentos entre diversas tabelas do Olist, integrando pedidos, produtos, clientes, vendedores, avaliações, pagamentos e análises de sentimento.
-
-Principais características:
-- A maioria dos relacionamentos segue cardinalidade **Many → One**, típica de modelos estrela.
-- Há relacionamentos **One → One** para dimensões especializadas (ex.: RFV).
-- Alguns relacionamentos são **Many → Many**, preservados por necessidade do negócio.
-- Relacionamentos envolvendo datas utilizam tabelas de calendário automáticas.
-
-Relacionamentos inativos foram mantidos para análises alternativas de data:
-- `olist_pedidos_dataset[data_envio]` → `dCalendario[Data]`
-- `olist_avaliações_dataset[Data_criação]` → `dCalendario[Data]`
-- `olist_avaliações_dataset[ID_Pedido]` → `olist_produtos_pedidos_dataset[Pedido_ID]`
-- 
-3. 📐 Medidas, Colunas e Tabelas Calculadas
+ 📐 Medidas, Colunas e Tabelas Calculadas
 
 Toda a documentação DAX (medidas, táticas e explicação) está disponível em um arquivo Excel incluído no repositório (medidas_descrição), com:
 
@@ -147,7 +87,7 @@ Inclui RFV, NPS, Análises de Receita, Faixas de Peso/Volume, Tabelas Virtuais, 
 
 4. 🤖 Análise de Sentimentos (Python — Modelo Híbrido ML + Regras)
 
-Notebook completo disponível no repositório.
+Notebook completo disponível no repositório (notebook/Análise de sentimentos.ipynb)
 Modelo: SVM + TF-IDF
 Acurácia ML: 80,3%
 Regras de negócio corrigiram 14,2k classificações (ex.: atraso, defeito, “não gostei”)
