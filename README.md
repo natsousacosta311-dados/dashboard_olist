@@ -17,7 +17,39 @@ A modelagem segue o padrão estrela (star schema):
 Fatos: Pedidos, Itens, Pagamentos, Avaliações
 Dimensões: Clientes, Vendedores, Produtos, Datas, Geolocalização, Categorias
 Tratamentos no Power Query: normalização de textos, conversão de tipos, tratamento de datas, criação de tabelas calendário e tabelas auxiliares (RFV, NPS, Faixas de Peso/Volume, Sentimentos).
-Relacionamentos documentados no repositório — modelo otimizado para alto desempenho.
+Relacionamentos documentados abaixo:
+
+## 🔗 Relacionamentos do Modelo (Power BI)
+
+| Tabela Origem | Coluna Origem | Tabela Destino | Coluna Destino | Cardinalidade | Direção | Status |
+|--------------|----------------|----------------|----------------|---------------|---------|--------|
+| olist | Date accessed | LocalDateTable_bc25db41... | Date | Many → One | OneDirection | Ativo |
+| olist | Date modified | LocalDateTable_d24415e6... | Date | Many → One | OneDirection | Ativo |
+| olist | Date created | LocalDateTable_da781db8... | Date | Many → One | OneDirection | Ativo |
+| olist_avaliações_dataset | data_resposta_avaliacao | LocalDateTable_a30b965a... | Date | Many → One | OneDirection | Ativo |
+| olist_pedidos_dataset | Data_aprovação | LocalDateTable_06da45c7... | Date | Many → One | OneDirection | Ativo |
+| olist_pedidos_dataset | data_entrega | LocalDateTable_9610681f... | Date | Many → One | OneDirection | Ativo |
+| olist_pedidos_dataset | data_prevista_entrega | LocalDateTable_69f414a0... | Date | Many → One | OneDirection | Ativo |
+| olist_pedidos_dataset | Cliente_ID | olist_clientes_dataset | Cliente_ID | One → One | BothDirections | Ativo |
+| olist_produtos_pedidos_dataset | Pedido_ID | olist_pedidos_dataset | Pedido_ID | Many → Many | BothDirections | Ativo |
+| olist_pagamentos_dataset | ID_Pedido | olist_pedidos_dataset | Pedido_ID | Many → Many | OneDirection | Ativo |
+| olist_avaliações_dataset | ID_Pedido | olist_pedidos_dataset | Pedido_ID | Many → One | OneDirection | Ativo |
+| olist_produtos_pedidos_dataset | Produto_ID | olist_produtos_dataset | ID_Produto | Many → One | OneDirection | Ativo |
+| olist_produtos_pedidos_dataset | Vendedor_ID | olist_vendedores_dataset | Vendedor_ID | Many → One | OneDirection | Ativo |
+| olist_produtos_pedidos_dataset | Data_Limite_envio | LocalDateTable_31e0bb4d... | Date | Many → One | OneDirection | Ativo |
+| olist_clientes_dataset | Cliente_ID | Tabela RFV Clientes | Cliente_ID | One → One | BothDirections | Ativo |
+| Base_com_Sentimento | ID_Pedido | olist_pedidos_dataset | Pedido_ID | Many → One | OneDirection | Ativo |
+| olist_avaliações_dataset | ID_avaliaçao | Base_com_Sentimento | ID_avaliaçao | Many → Many | BothDirections | Ativo |
+| Exemplos_Problemas | Tipo_Problema | Top_10_Reclamacoes | Tipo_Problema | Many → One | OneDirection | Ativo |
+| Sentimento_por_Confianca | Faixa_Confianca | Distribuicao_Confianca | Faixa_Confianca | One → One | BothDirections | Ativo |
+| dCalendario | Data | LocalDateTable_0f03f024... | Date | Many → One | OneDirection | Ativo |
+| olist_pedidos_dataset | data_envio | dCalendario | Data | Many → One | OneDirection | **Inativo** |
+| olist_avaliações_dataset | Data_criação | dCalendario | Data | Many → One | OneDirection | **Inativo** |
+| olist_pedidos_dataset | Data_compra | dCalendario | Data | Many → One | OneDirection | Ativo |
+| Base_com_Sentimento | Metodo_Classificacao | Confianca_por_Metodo | Metodo_Classificacao | Many → One | OneDirection | Ativo |
+| olist_avaliações_dataset | ID_Pedido | olist_produtos_pedidos_dataset | Pedido_ID | Many → Many | BothDirections | **Inativo** |
+| olist_clientes_dataset | Primeira Compra (Cliente) | LocalDateTable_f36dd289... | Date | Many → One | OneDirection | Ativo |
+
 
 3. 📐 Medidas, Colunas e Tabelas Calculadas
 
