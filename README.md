@@ -1,74 +1,122 @@
-📊 Dashboard Olist — BI/DS End-to-End
---
+# 🛒 Marketplace Olist — Dashboard Analítico & NLP
 
-Projeto completo de Business Intelligence + Data Analytics + NLP (Análise de Sentimentos) desenvolvido com Power BI, Python e Power Query.
-Dataset oficial da Olist (Kaggle).
-Modelos: Power BI, Python (NLP), Power Query, DAX
-Arquitetura: ETL → Modelagem Dimensional → Métricas DAX → ML (SVM + Regras) → Dashboards Interativos
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
+[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://figma.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-📝 Resumo Executivo 
---
+> Análise completa do marketplace Olist com **segmentação de clientes por RFV**, **análise de sentimentos com Machine Learning** e dashboard analítico desenvolvido no Figma.
 
-Este projeto entrega uma visão completa da operação de e-commerce da Olist, consolidando vendas, comportamento do cliente, desempenho de vendedores e percepção de qualidade. O dashboard transforma dados brutos em insights acionáveis, incluindo análise de sentimento baseada em NLP. A solução demonstra domínio em modelagem de dados, DAX, storytelling e machine learning aplicado ao negócio.
-
-🧩 1. Objetivo do Projeto
---
-
-Construir um dashboard profissional que responda perguntas-chave de negócio:
-
-Como está o desempenho comercial (faturamento, pedidos, ticket médio)?
-Quais clientes geram mais valor e como segmentá-los (RFV)?
-Quais produtos têm melhor performance e margem?
-Como os vendedores se comportam (prazo de envio, pedidos, reclamações)?
-O que os clientes relatam em suas avaliações? Quais problemas são mais frequentes?
-
-🛠️ 2. Tecnologias e Arquitetura
---
-| Categoria               | Ferramentas / Tecnologias                                       |
-|-------------------------|------------------------------------------------------------------|
-| Arquitetura             | Modelagem Dimensional (Star Schema)                              |
-| Modelagem/Visualização  | Power BI Desktop, DAX                                            |
-| Transformação de Dados  | Power Query (M Language), ETL (Extract, Transform, Load)         |
-| Data Science / ML       | Python, Jupyter Notebook, NLP (Pré-processamento, Classificação de Sentimento) |
-| Datasets                | Olist (Kaggle), Integração dos dados tratados via Python (Sentimento) |
-
-
-📖 3. Documentação Técnica
---
-A documentação detalhada do projeto está organizada na pasta `docs/`.
-
-| Tema                   | Conteúdo                                                         | Acesso Rápido                                                    |
-|------------------------|------------------------------------------------------------------|------------------------------------------------------------------|
-| Visão Geral            | Escopo, objetivos e principais resultados                        | [docs/01_visao_geral.md](docs/01_visao_geral.md)                 |
-| Modelagem de Dados     | Diagrama de relacionamentos, cardinalidades e direção dos filtros | [docs/02_modelagem_de_relacionamentos.md](docs/02_modelagem_de_relacionamentos.md) |
-| Transformações ETL     | Guia completo das etapas de transformação e limpeza (Power Query) | [docs/03_transformacoes_power_query.md](docs/03_transformacoes_power_query.md)     |
-| Dicionário de Medidas  | Definições e lógica de todas as métricas e KPIs em DAX           | [docs/04_dicionario_medidas.md](docs/04_dicionario_medidas.md)   |
-
-
-🤖 4. Análise de Sentimento (NLP)
---
-O coração do componente de Data Science é a análise de sentimento, que transforma o texto livre dos comentários dos clientes em dados estruturados.
-Processo: Toda a lógica de pré-processamento, classificação de sentimento (via SVM + regras linguísticas) e geração de métricas de confiança foi executada em Python.
-Output: Os resultados (tabelas de sentimento e confiança) são integrados ao modelo Power BI.
-Notebook: notebook/analise_sentimentos.ipynb
-
-📁 5. Estrutura de Pastas do Repositório 
 ---
+
+## 🎯 Objetivo
+
+Extrair insights estratégicos do dataset público do Olist, identificando perfis de clientes por valor, frequência e recência de compras — e compreendendo a satisfação dos clientes por meio de análise de sentimentos nas avaliações textuais.
+
+---
+
+## ✨ Funcionalidades
+
+### 👥 Segmentação RFV
+
+| Métrica | Descrição |
+|---|---|
+| **R** — Recência | Há quantos dias o cliente fez sua última compra |
+| **F** — Frequência | Quantas vezes o cliente comprou no período |
+| **V** — Valor | Valor total gasto pelo cliente |
+
+- Clusterização dos clientes em segmentos estratégicos *(Champions, Leais, Em risco, etc.)*
+- Identificação dos clientes mais valiosos para ações de retenção e fidelização
+
+### 💬 Análise de Sentimentos com NLP
+
+- Pré-processamento e limpeza dos textos de avaliação
+- Classificação de sentimentos usando **Machine Learning**
+- Correlação entre nota de avaliação e sentimento do texto
+
+### 🎨 Dashboard Analítico
+
+- Interface projetada no **Figma** com foco em clareza e UX analítica
+- Visualizações de KPIs por segmento de cliente
+- Mapa de satisfação e distribuição geográfica
+
+---
+
+## 🛠️ Tecnologias
+
+| Tecnologia | Uso |
+|---|---|
+| **Python** | Linguagem base da análise |
+| **Pandas / NumPy** | Manipulação e preparação dos dados |
+| **Scikit-learn** | Modelos de ML para análise de sentimentos |
+| **NLTK / spaCy** | Processamento de linguagem natural |
+| **Matplotlib / Seaborn** | Visualizações exploratórias |
+| **Figma** | Design do dashboard analítico |
+
+---
+
+## 📊 Dataset
+
+Dataset público disponível no [Kaggle — Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+
+```
+olist_orders_dataset.csv
+olist_customers_dataset.csv
+olist_order_reviews_dataset.csv
+olist_order_items_dataset.csv
+olist_products_dataset.csv
+```
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
 dashboard_olist/
 │
-├── README.md
+├── notebooks/
+│   ├── 01_eda_exploração.ipynb         # Análise exploratória
+│   ├── 02_segmentacao_rfv.ipynb        # Clusterização RFV
+│   └── 03_analise_sentimentos.ipynb    # NLP e ML
 │
-├── docs/
-│   ├── 01_visao_geral.md
-│   ├── 02_modelagem_de_relacionamentos.md      # imagem exportada do Power BI
-│   ├── 03_transformacoes_power_query.md        # guia detalhado
-│   ├── 04_dicionario_medidas.md                # tabela com DAX + descrição
-│
-├── imagens/                                    # prints das páginas do BI
-│
-├── notebook/
-│   └── analise_sentimentos.ipynb               # NLP (Python)
+├── data/                               # Datasets Olist
+├── dashboard/                          # Arquivos do design Figma
+├── requirements.txt
+└── README.md
+```
 
+---
+
+## 🚀 Como Executar
+
+```bash
+git clone https://github.com/natsousacosta311-dados/dashboard_olist.git
+cd dashboard_olist
+pip install -r requirements.txt
+jupyter notebook
+```
+
+Execute os notebooks em sequência (01 → 03).
+
+---
+
+## 📌 Aprendizados e Próximos Passos
+
+- [x] Segmentação RFV funcional
+- [x] Modelo NLP para análise de sentimentos
+- [x] Design do dashboard no Figma
+- [ ] Deploy do dashboard como webapp (Streamlit)
+- [ ] Análise preditiva de churn por segmento
+
+---
+
+## 👩‍💻 Autora
+
+**Natasha de Sousa Costa** — AI Engineer | Data Scientist
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-perfil)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/natsousacosta311-dados)
 
 📄 Licença
 
